@@ -159,6 +159,7 @@ body:before {
 }
 .contents {
   max-width: 700px;
+  width: 95%;
   margin: 0 auto;
   line-height: 60px;
 }
@@ -179,4 +180,7 @@ h1 {
   max-width: 700px;
   display: block;
   margin: 80px auto;
+}
+h1 img {
+  max-width: 80%;
 }
