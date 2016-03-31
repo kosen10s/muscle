@@ -1,0 +1,16 @@
+extends ./includes/template.jade
+
+block contents
+  - var places = ["おもしろわいわい恐竜公園","かつやま恐竜の森（入口）","恐竜博物館屋外"]
+  - var names  = ["恐竜遊具","カツヤマリュウ","恐竜博士"]
+  - var lats   = [36.074212,36.081205,36.083459]
+  - var lngs   = [136.478423,136.509231,136.506720]
+  - images = ["http://www.city.katsuyama.fukui.jp/docs/uploads/image_default/4230_image_lib_image_160217162849.JPG","http://www.city.katsuyama.fukui.jp/docs/uploads/image_default/4234_image_lib_image_160217163228.JPG","http://www.city.katsuyama.fukui.jp/docs/uploads/image_default/4236_image_lib_image_160217163517.JPG"]
+  each i in [0,1,2]
+    .monument
+      img(src="#{images[i]}").thumbnail
+      .description
+        h3 #{names[i]}
+        p #{places[i]}
+      iframe(src="http://maps.google.co.jp/maps?q=loc:#{lats[i]},#{lngs[i]}&iwloc=J&output=embed")
+
