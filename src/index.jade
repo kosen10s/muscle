@@ -1,16 +1,25 @@
 extends ./includes/template.jade
 
 block contents
-  - var places = ["おもしろわいわい恐竜公園","かつやま恐竜の森（入口）","恐竜博物館屋外"]
-  - var names  = ["恐竜遊具","カツヤマリュウ","恐竜博士"]
-  - var lats   = [36.074212,36.081205,36.083459]
-  - var lngs   = [136.478423,136.509231,136.506720]
-  - images = ["http://www.city.katsuyama.fukui.jp/docs/uploads/image_default/4230_image_lib_image_160217162849.JPG","http://www.city.katsuyama.fukui.jp/docs/uploads/image_default/4234_image_lib_image_160217163228.JPG","http://www.city.katsuyama.fukui.jp/docs/uploads/image_default/4236_image_lib_image_160217163517.JPG"]
-  each i in [0,1,2]
-    .monument
-      img(src="#{images[i]}").thumbnail
-      .description
-        h3 #{names[i]}
-        p #{places[i]}
-      iframe(src="http://maps.google.co.jp/maps?q=loc:#{lats[i]},#{lngs[i]}&iwloc=J&output=embed")
-
+  p
+    | LT値とは、有酸素運動と無酸素運動の臨界点のこと。
+    br
+    | kosen10sLTとは、2010年に高専入学をした高専OBたちが集まってLT値を超えた活動…
+    br
+    | すなわち
+    strong 筋トレ
+    | をする会です。
+    
+  h3 過去の参加者の声
+  ul
+    li また、この世の事象の一つが筋肉で解決した
+    li あれ、意外と筋肉すごくない?!
+    li 俺の筋肉を初見で見抜いてきたのはあの人だけだ…!!
+    li 筋肉を注ぐ
+  p
+    | kosen10s LTは筋肉でお互いを高めあえる会です。
+    br
+    | もっと進化したい人、人間を辞めたい人、筋肉デビューしたい人…ぜひとも足をお運びください
+    br
+    | 5/1 第四回 開催予定
+  a(href="") (筋トレをしたいわけじゃない人はこちら)
