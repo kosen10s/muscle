@@ -9,6 +9,7 @@ html
     title #{title} | denari.link
   body(class="#{classList.join(' ')}")
     include ./header.jade
-    block contents
-      | coming soon...
+    .contents
+      block contents
+        | coming soon...
     include ./footer.jade
